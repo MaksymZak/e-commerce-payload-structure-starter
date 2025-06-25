@@ -21,7 +21,6 @@ export function LoginForm() {
       password: formData.get('password') as string,
     }
 
-    console.log('startTransition', data)
     startTransition(async () => {
       const result = await loginAction(data)
 

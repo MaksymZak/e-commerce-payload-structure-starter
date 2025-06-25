@@ -15,7 +15,6 @@ interface ActionResult {
 
 export async function loginAction(data: LoginFormData): Promise<ActionResult> {
   try {
-    console.log({ data })
     // Validate input
     const { email, password } = loginSchema.parse(data)
 
@@ -27,7 +26,6 @@ export async function loginAction(data: LoginFormData): Promise<ActionResult> {
       password,
     })
 
-    console.log({ result })
     if (result.user) {
       return { success: true, message: 'Login successful' }
     } else {

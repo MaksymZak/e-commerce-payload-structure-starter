@@ -7,7 +7,8 @@ import './globals.css'
 
 export const metadata = {
   title: 'E-Commerce Demo - Advanced Data Access Patterns',
-  description: 'Educational e-commerce demo showcasing advanced data access patterns in Payload CMS. Built for learning and demonstration purposes.',
+  description:
+    'Educational e-commerce demo showcasing advanced data access patterns in Payload CMS. Built for learning and demonstration purposes.',
   keywords: 'e-commerce, payload cms, next.js, data access patterns, demo',
 }
 
@@ -32,8 +33,8 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
                   Categories
                 </Link>
                 {user && (
-                  <Link 
-                    href="/cart" 
+                  <Link
+                    href="/cart"
                     className="flex items-center space-x-1 hover:text-blue-600 transition-colors"
                   >
                     <ShoppingCart className="h-5 w-5" />
@@ -43,8 +44,8 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
                 {user ? (
                   <UserButton user={user} />
                 ) : (
-                  <Link 
-                    href="/auth" 
+                  <Link
+                    href="/auth"
                     className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
                   >
                     Sign In
